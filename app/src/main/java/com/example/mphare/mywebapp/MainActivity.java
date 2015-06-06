@@ -86,7 +86,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     {
       HttpClient httpClient = new DefaultHttpClient();
       HttpContext localContext = new BasicHttpContext();
-      HttpGet httpGet = new HttpGet("http://localhost:8080/VogelREST/rest/hello/arg?idx=5");
+      // Cannot use 'localhost' here, remember?
+      // Must use the IP Address of the local host instead
+      HttpGet httpGet = new HttpGet("http://192.168.1.13:8080/VogelREST/rest/hello/arg?idx=5");
       String text = null;
 
       try
