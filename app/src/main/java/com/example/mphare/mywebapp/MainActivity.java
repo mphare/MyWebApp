@@ -91,7 +91,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
       try
       {
-        HttpResponse response = HttpClient.execute(httpGet, localContext);
+        HttpResponse response = httpClient.execute(httpGet, localContext);
 
         HttpEntity entity = response.getEntity();
 
