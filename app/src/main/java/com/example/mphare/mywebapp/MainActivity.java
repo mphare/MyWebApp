@@ -1,5 +1,6 @@
 package com.example.mphare.mywebapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
   {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
+    // return super.onCreateOptionsMenu(menu);
     return true;
   }
 
@@ -50,10 +52,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings)
     {
+      openSettings();
       return true;
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  private void openSettings()
+  {
+    Intent intent = new Intent(this, SettingsActivity.class);
+    startActivity(intent);
+
   }
 
   @Override public void onClick(View v)
@@ -88,15 +98,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       HttpContext localContext = new BasicHttpContext();
       // Cannot use 'localhost' here, remember?
       // Must use the IP Address of the local host instead
-      HttpGet httpGet = new HttpGet("http://192.168.1.13:8080/VogelREST/rest/hello/arg?idx=5");
+      String urlValue = "http://192.168.1.13:8080";
+      HttpGet httpGet = new HttpGet(urlValue + "/VogelREST/rest/hello/arg?idx=5");
       String text = null;
 
       try
       {
         HttpResponse response = httpClient.execute(httpGet, localContext);
-
         HttpEntity entity = response.getEntity();
-
         text = getASCIIContentFromEntity(entity);
       } catch (Exception e)
       {
