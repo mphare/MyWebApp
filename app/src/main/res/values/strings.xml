@@ -8,4 +8,7 @@
     <string name="settings_message">Hello from Settings</string>
     <string name="host_title">Host:</string>
     <string name="url_button_label">Change..</string>
+    <string name="title_activity_entry_list">EntryListActivity</string>
+    <string name="title_activity_url_list">UrlListActivity</string>
+    <string name="url_list_label">URL List</string>
 </resources>

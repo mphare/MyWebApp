@@ -36,15 +36,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
-                android:id="@+id/textView3"/>
+                android:id="@+id/textView3"
+                android:onClick="onChangeUrl"
+                android:clickable="true"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/url_button_label"
-                android:id="@+id/url_button"
-                android:layout_column="17"
-                android:layout_gravity="right"/>
         </TableRow>
 
     </TableLayout>
