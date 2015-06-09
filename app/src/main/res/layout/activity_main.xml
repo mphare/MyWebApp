@@ -21,14 +21,10 @@
         android:layout_gravity="center"
         android:text="Get"/>
 
-    <EditText
-        android:id="@+id/my_edit"
-        android:layout_width="fill_parent"
+    <WebView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:editable="false"
-        android:maxLines="15"
-        android:minLines="15"
-        android:textSize="12sp"/>
+        android:id="@+id/main_webview"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

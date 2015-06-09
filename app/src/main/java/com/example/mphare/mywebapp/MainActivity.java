@@ -7,8 +7,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.EditText;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -30,6 +30,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     findViewById(R.id.my_button).setOnClickListener(this);
+
   }
 
   @Override
@@ -98,8 +99,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       HttpContext localContext = new BasicHttpContext();
       // Cannot use 'localhost' here, remember?
       // Must use the IP Address of the local host instead
-      String urlValue = "http://192.168.1.13:8080";
-      HttpGet httpGet = new HttpGet(urlValue + "/VogelREST/rest/hello/arg?idx=5");
+//      String urlValue = "http://192.168.1.13:8080";
+      String urlValue = "http://192.168.43.141:8080";
+      HttpGet httpGet = new HttpGet(urlValue + "/VogelREST/rest/hello/list");
       String text = null;
 
       try
@@ -118,8 +120,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     {
       if (results != null)
       {
-        EditText et = (EditText) findViewById(R.id.my_edit);
-        et.setText(results);
+        // Replace the simple text edit view with a web view
+//        EditText et = (EditText) findViewById(R.id.my_edit);
+//        et.setText(results);
+        WebView wv = (WebView) findViewById(R.id.main_webview);
+        wv.loadData(results, "text/html", null);
       }
 
       Button b = (Button) findViewById(R.id.my_button);
