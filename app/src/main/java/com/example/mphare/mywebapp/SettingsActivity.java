@@ -1,11 +1,11 @@
 package com.example.mphare.mywebapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class SettingsActivity extends ActionBarActivity
 {
@@ -16,13 +16,19 @@ public class SettingsActivity extends ActionBarActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_settings);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-  }
 
-  public void onChangeUrl(View view)
-  {
-    Intent intent = new Intent(this, SettingsActivity.class);
-    startActivity(intent);
+    String[] myStringArray = new String[4];
 
+    myStringArray[0] = "Zero Title";
+    myStringArray[1] = "One Title";
+    myStringArray[2] = "Two Title";
+    myStringArray[3] = "Three Title";
+
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+                                                            myStringArray);
+
+    ListView listView = (ListView) findViewById(R.id.settings_listview);
+    listView.setAdapter(adapter);
   }
 
   @Override
