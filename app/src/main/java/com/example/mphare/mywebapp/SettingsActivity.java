@@ -17,6 +17,8 @@ public class SettingsActivity extends ActionBarActivity
     setContentView(R.layout.activity_settings);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    MyFancyObject[] mfo = new MyFancyObject[4];
+    
     String[] myStringArray = new String[4];
 
     myStringArray[0] = "Zero Title";

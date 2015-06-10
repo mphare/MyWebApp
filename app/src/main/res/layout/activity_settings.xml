@@ -15,11 +15,24 @@
         android:id="@+id/textView"
         android:layout_centerHorizontal="true"/>
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/settings_listview"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="249dp"
+            android:id="@+id/settings_listview"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cursor_listview"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
 
 </RelativeLayout>
