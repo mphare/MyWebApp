@@ -1,4 +1,4 @@
-package com.example.mphare.mywebapp;
+package com.example.mphare.mywebapp.activities;
 
 /**
  * Created by mphare on 6/8/2015.

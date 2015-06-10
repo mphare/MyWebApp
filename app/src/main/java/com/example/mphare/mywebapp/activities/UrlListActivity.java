@@ -1,25 +1,27 @@
-package com.example.mphare.mywebapp;
+package com.example.mphare.mywebapp.activities;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class EntryListActivity extends ActionBarActivity
+import com.example.mphare.mywebapp.R;
+
+public class UrlListActivity extends ActionBarActivity
 {
 
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_entry_list);
+    setContentView(R.layout.activity_url_list);
   }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu)
   {
     // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.menu_entry_list, menu);
+    getMenuInflater().inflate(R.menu.menu_url_list, menu);
     return true;
   }
 

@@ -1,4 +1,4 @@
-package com.example.mphare.mywebapp;
+package com.example.mphare.mywebapp.activities;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+
+import com.example.mphare.mywebapp.R;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

@@ -24,7 +24,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,21 +36,21 @@
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".activities.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
         <activity
-            android:name=".EntryListActivity"
+            android:name=".activities.EntryListActivity"
             android:label="@string/title_activity_entry_list" >
         </activity>
         <activity
-            android:name=".UrlListActivity"
+            android:name=".activities.UrlListActivity"
             android:label="@string/title_activity_url_list" >
         </activity>
     </application>

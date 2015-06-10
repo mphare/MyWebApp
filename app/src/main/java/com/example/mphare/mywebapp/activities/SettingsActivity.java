@@ -1,4 +1,4 @@
-package com.example.mphare.mywebapp;
+package com.example.mphare.mywebapp.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -6,6 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.mphare.mywebapp.R;
+import com.example.mphare.mywebapp.activities.MyFancyObject;
 
 public class SettingsActivity extends ActionBarActivity
 {
