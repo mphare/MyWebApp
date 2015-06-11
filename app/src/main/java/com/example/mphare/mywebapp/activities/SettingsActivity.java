@@ -1,14 +1,13 @@
 package com.example.mphare.mywebapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
 
 import com.example.mphare.mywebapp.R;
-import com.example.mphare.mywebapp.activities.MyFancyObject;
 
 public class SettingsActivity extends ActionBarActivity
 {
@@ -20,20 +19,26 @@ public class SettingsActivity extends ActionBarActivity
     setContentView(R.layout.activity_settings);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    MyFancyObject[] mfo = new MyFancyObject[4];
-    
-    String[] myStringArray = new String[4];
+//    MyFancyObject[] mfo = new MyFancyObject[4];
+//
+//    String[] myStringArray = new String[4];
+//
+//    myStringArray[0] = "Zero Title";
+//    myStringArray[1] = "One Title";
+//    myStringArray[2] = "Two Title";
+//    myStringArray[3] = "Three Title";
+//
+//    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+//                                                            myStringArray);
+//
+//    ListView listView = (ListView) findViewById(R.id.settings_listview);
+//    listView.setAdapter(adapter);
+  }
 
-    myStringArray[0] = "Zero Title";
-    myStringArray[1] = "One Title";
-    myStringArray[2] = "Two Title";
-    myStringArray[3] = "Three Title";
-
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-                                                            myStringArray);
-
-    ListView listView = (ListView) findViewById(R.id.settings_listview);
-    listView.setAdapter(adapter);
+  public void selectUrl(View view)
+  {
+    Intent intent = new Intent(this, UrlListActivity.class);
+    startActivity(intent);
   }
 
   @Override

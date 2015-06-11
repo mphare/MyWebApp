@@ -18,21 +18,19 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView">
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="249dp"
-            android:id="@+id/settings_listview"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"/>
-
-        <ListView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cursor_listview"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:text="URL Selection"
+            android:id="@+id/id_selector"
+            android:onClick="selectUrl"
+            android:nestedScrollingEnabled="false"
+            android:clickable="true"/>
+
     </LinearLayout>
 
 </RelativeLayout>
