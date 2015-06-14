@@ -10,7 +10,7 @@
             android:title="@string/servers_title"/>
 
         <EditTextPreference
-            android:defaultValue="http://192.168.43.152:9443"
+            android:defaultValue="http://192.168.1.13:8080"
             android:key="@string/brooklyn_server_key"
             android:title="Set server manually"/>
     </PreferenceCategory>
