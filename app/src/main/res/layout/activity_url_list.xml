@@ -21,5 +21,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/url_list_view"
         android:layout_below="@+id/url_list_title"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:background="#4fc8bf1a"/>
 </RelativeLayout>
