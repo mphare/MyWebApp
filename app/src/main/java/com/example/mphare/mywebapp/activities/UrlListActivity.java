@@ -6,15 +6,33 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.mphare.mywebapp.R;
+import com.example.mphare.mywebapp.ServerObject;
+
+import java.util.ArrayList;
+import android.util.Log;
 
 public class UrlListActivity extends ActionBarActivity
 {
+
+  ArrayList<ServerObject> serverObjectArrayList = new ArrayList<ServerObject>();
 
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_url_list);
+
+    String[] myStrings = getResources().getStringArray(R.array.server_uri_array);
+
+    for (String url : myStrings) {
+
+      Log.d("String Resource","URL: "+url);
+      ServerObject so = new ServerObject(url);
+      serverObjectArrayList.add(so);
+
+    }
+
+    
   }
 
   @Override

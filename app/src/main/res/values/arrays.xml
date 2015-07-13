@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    <PreferenceCategory android:title="@string/server_config">
-        <ListPreference
-            android:dialogTitle="@string/servers"
-            android:entries="@array/servers_devonly_array"
-            android:entryValues="@array/servers_devonly_array"
-            android:key="@string/brooklyn_server_key"
-            android:summary="@string/unknown"
-            android:title="@string/servers_title"/>
-
-        <EditTextPreference
-            android:defaultValue="http://192.168.43.152:9443"
-            android:key="@string/brooklyn_server_key"
-            android:title="Set server manually"/>
-    </PreferenceCategory>
-    -->
 <resources>
     <string-array name="server_uri_array">
         <item>http://192.168.43.141:8080</item>
