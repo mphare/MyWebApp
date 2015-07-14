@@ -1,32 +1,36 @@
 package com.example.mphare.mywebapp;
 
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-
-import java.util.HashMap;
-import java.util.List;
+import android.widget.TextView;
 
 /**
  * Created by mphare on 6/13/2015.
  */
 public class StableArrayAdapter extends ArrayAdapter<String>
 {
-  HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
-  public StableArrayAdapter(Context context, int textViewResourceId, List<String> objects)
+  private final Context  context;
+  private final String[] uriValues;
+
+  public StableArrayAdapter(Context context, String[] uriValues)
   {
-    super(context, textViewResourceId, objects);
-    for (int i = 0; i < objects.size(); ++i)
-    {
-      mIdMap.put(objects.get(i), i);
-    }
+    super(context, -1, uriValues);
+    this.context = context;
+    this.uriValues = uriValues;
   }
 
   @Override
-  public long getItemId(int position)
+  public View getView(int position, View convertView, ViewGroup parent)
   {
-    String item = getItem(position);
-    return mIdMap.get(item);
-  }
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    View rowView = inflater.inflate(R.layout.uri_list_item_layout, parent, false);
+    TextView textView = (TextView) rowView.findViewById(R.id.uri_list_value);
+    textView.setText(uriValues[position]);
 
+    return rowView;
+  }
 }
