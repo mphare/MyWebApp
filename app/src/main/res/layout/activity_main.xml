@@ -6,30 +6,30 @@
                                              android:orientation="vertical"
                                              tools:context=".MainActivity"
                                              tools:layout_editor_absoluteX="0dp"
-                                             tools:layout_editor_absoluteY="73dp"
+                                             tools:layout_editor_absoluteY="81dp"
                                              android:id="@+id/constraintLayout">
 
     <TextView
-        android:layout_width="106dp"
-        android:layout_height="wrap_content"
-        android:text="HTTP GET Demo"
+        android:layout_width="138dp"
+        android:layout_height="33dp"
+        android:text="@string/getLabel"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
         android:id="@+id/textView2"
         app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintLeft_creator="0"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout"
         android:layout_marginTop="16dp"
-        tools:layout_constraintTop_creator="1"/>
+        tools:layout_constraintTop_creator="0"/>
 
     <Button
         android:id="@+id/my_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get"
-        tools:layout_editor_absoluteX="160dp"
+        android:text="@string/getButton"
+        tools:layout_editor_absoluteX="192dp"
         tools:layout_editor_absoluteY="32dp"
         app:layout_constraintLeft_toRightOf="@+id/textView2"
         android:layout_marginLeft="38dp"
@@ -44,7 +44,7 @@
         android:layout_height="402dp"
         android:id="@+id/main_webview"
         tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="90dp"
+        tools:layout_editor_absoluteY="86dp"
         app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"

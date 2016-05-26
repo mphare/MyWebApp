@@ -11,4 +11,6 @@
     <string name="title_activity_entry_list">EntryListActivity</string>
     <string name="title_activity_url_list">UrlListActivity</string>
     <string name="url_list_label">URL List</string>
+    <string name="getButton">GET</string>
+    <string name="getLabel">HTTP Get List Demo</string>
 </resources>
