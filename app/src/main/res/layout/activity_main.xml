@@ -1,30 +1,63 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:orientation="vertical"
-              android:paddingBottom="@dimen/activity_vertical_margin"
-              android:paddingLeft="@dimen/activity_horizontal_margin"
-              android:paddingRight="@dimen/activity_horizontal_margin"
-              android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context=".MainActivity">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="fill_parent"
+                                             android:layout_height="fill_parent"
+                                             android:orientation="vertical"
+                                             tools:context=".MainActivity"
+                                             tools:layout_editor_absoluteX="0dp"
+                                             tools:layout_editor_absoluteY="73dp"
+                                             android:id="@+id/constraintLayout">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
-        android:text="HTTP GET Demo"/>
+        android:text="HTTP GET Demo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:id="@+id/textView2"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintTop_creator="1"/>
 
     <Button
         android:id="@+id/my_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Get"/>
+        android:text="Get"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="32dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:layout_marginTop="32dp"
+        tools:layout_constraintTop_creator="1"/>
 
     <WebView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="308dp"
+        android:layout_height="402dp"
         android:id="@+id/main_webview"
-        android:layout_gravity="center_horizontal"/>
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="90dp"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:layout_marginTop="80dp"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        tools:layout_constraintRight_creator="0"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        android:layout_marginBottom="16dp"
+        tools:layout_constraintBottom_creator="0"/>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
