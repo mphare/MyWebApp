@@ -101,8 +101,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
       HttpContext localContext = new BasicHttpContext();
       // Cannot use 'localhost' here, remember?
       // Must use the IP Address of the local host instead
-      String urlValue = "http://192.168.1.13:8080";
-//      String urlValue = "http://192.168.43.141:8080";
+//      String urlValue = "http://192.168.1.13:8080";
+      String urlValue = "http://192.168.43.141:8080";
       HttpGet httpGet = new HttpGet(urlValue + "/VogelREST/rest/hello/list");
       String text = null;
 

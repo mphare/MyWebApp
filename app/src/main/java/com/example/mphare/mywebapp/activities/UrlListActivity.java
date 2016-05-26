@@ -9,12 +9,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.mphare.mywebapp.R;
-import com.example.mphare.mywebapp.StableArrayAdapter;
+import com.example.mphare.mywebapp.ServerObject;
 
 import java.util.ArrayList;
+import android.util.Log;
+import com.example.mphare.mywebapp.StableArrayAdapter;
 
 public class UrlListActivity extends ActionBarActivity
 {
+
+  ArrayList<ServerObject> serverObjectArrayList = new ArrayList<ServerObject>();
 
   @Override
   protected void onCreate(Bundle savedInstanceState)
@@ -22,8 +26,17 @@ public class UrlListActivity extends ActionBarActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_url_list);
 
+    String[] values = getResources().getStringArray(R.array.server_uri_array);
+
+    for (String url : values) {
+
+      Log.d("String Resource","URL: "+url);
+      ServerObject so = new ServerObject(url);
+      serverObjectArrayList.add(so);
+
+    }
+
     final ListView listView = (ListView) findViewById(R.id.url_list_view);
-    String[] values = new String[]{"192.168.1.13:8080", "192.168.43.141:8080"};
     final ArrayList<String> list = new ArrayList<String>();
 
     for (int i = 0; i < values.length; ++i)
@@ -49,7 +62,6 @@ public class UrlListActivity extends ActionBarActivity
         });
       }
     });
-
   }
 
   @Override
